@@ -40,13 +40,21 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
+  twitter: require("../assets/twitter.white.svg"),
+  github: require("../assets/github.white.svg"),
   markdown: require("../assets/markdown.png")
 };
 
 preloader(images);
 
 const theme = createTheme({
-  primary: "#ff4081"
+  primary: "#ff4081",
+  pink: "#ec607f",
+  yellow: "#f6d743",
+  green: "#48f3a5"
+}, {
+  primary: "Sharp Sans No1",
+  secondary: { name: "Droid Serif", googleFont: true, styles: [ "400", "700i" ] }
 });
 
 export default class Presentation extends React.Component {
@@ -54,18 +62,20 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
-          <Slide transition={["zoom"]} bgColor="primary">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
-              Spectacle
+          <Slide transition={["zoom"]} bgColor="black">
+            <Heading size={7} fit caps lineHeight={1} textColor="white">
+              Bottling React's
             </Heading>
-            <Heading size={1} fit caps>
-              A ReactJS Presentation Library
+            <Heading size={1} fit textColor="pink" caps>
+              Secret sauce
             </Heading>
-            <Heading size={1} fit caps textColor="black">
-              Where You Can Write Your Decks In JSX
-            </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text bold caps textColor="tertiary">View on Github</Text>
+            <Link href="https://twitter.com/djsheldrick">
+              <Text display="inline" textColor="white">
+                <Image display="inline" src={images.twitter} width={100} margin="0 0 -35px" />
+                @djsheldrick
+                <Image display="inline" src={images.github} width={120} margin="0 0 -17px" padding="0 24px" />
+                @ds300
+              </Text>
             </Link>
             <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
           </Slide>
