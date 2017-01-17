@@ -1,0 +1,6 @@
+setX(x: number) {
+  this.x = x;
+  this.emit('change');
+}
+// ...
+that.on('change', () => update(otherStuff));

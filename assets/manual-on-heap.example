@@ -1,0 +1,4 @@
+setX(x: number) {
+  this.x = x;
+  this.y = x * 2;
+}
