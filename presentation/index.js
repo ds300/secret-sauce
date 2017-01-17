@@ -47,6 +47,8 @@ const images = {
   markdown: require("../assets/markdown.png"),
   futurice: require("../assets/futurice.svg"),
   mindBlown: require("../assets/mind-blown.gif"),
+  vaguelyHow: require("../assets/vaguely-how.svg"),
+  derivables: require("../assets/derivables.svg"),
   inconsistency: [
     require("../assets/inconsistency1.svg"),
     require("../assets/inconsistency2.svg"),
@@ -518,6 +520,59 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" bgImage={images.mindBlown} />
+          <Slide transition={["slide"]} bgColor="yellow">
+            <Text margin="0 0 30px">
+              So what if we could execute side effects by outlining the next
+              state we want an external system to be in, and letting it figure
+              out how to get there?
+            </Text>
+            <Text>
+              <strong>Sound familiar?</strong>
+            </Text>
+          </Slide>
+          <Slide transition={["none"]} bgColor="yellow">
+            <Text margin="0 0 30px">
+              So what if we could execute side effects by outlining the next
+              state we want an external system to be in, and letting it figure
+              out how to get there?
+            </Text>
+            <Text>
+              <strong>That's React!</strong>
+            </Text>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <Image src={images.vaguelyHow} fit />
+          </Slide>
+          <Slide transition={["slide"]} bgColor="pink">
+            <Text textColor="black" textAlign="left" padding="0 0 40px">
+              primary beef
+            </Text>
+            <Heading fit size={4} textColor="black" fontSize="80px">
+              React <span style={{color: "white"}}>only cares about VDOM</span>
+            </Heading>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="yellow">
+            <Text fit textColor="black">
+              introducing
+            </Text>
+            <Heading size={2} fit textColor="black">
+              DERIVABLES
+            </Heading>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="yellow">
+            <Text fit textColor="black">
+              general purpose
+            </Text>
+            <Heading size={2} fit textColor="black">
+              push-pull
+            </Heading>
+            <Text fit textColor="black">
+              for great good
+            </Text>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <Image src={images.derivables} fit />
+          </Slide>
         </Deck>
       </Spectacle>
     );
