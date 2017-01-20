@@ -24,6 +24,8 @@ import {
   S
 } from "spectacle";
 
+import CodeSlide from 'spectacle-code-slide';
+
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
@@ -49,6 +51,8 @@ const images = {
   mindBlown: require("../assets/mind-blown.gif"),
   vaguelyHow: require("../assets/vaguely-how.svg"),
   derivables: require("../assets/derivables.svg"),
+  jori: require("../assets/jori.png"),
+  dan: require("../assets/dan.png"),
   inconsistency: [
     require("../assets/inconsistency1.svg"),
     require("../assets/inconsistency2.svg"),
@@ -73,13 +77,14 @@ const images = {
 
 const code = {
   manualOnHeap: require("raw!../assets/manual-on-heap.example"),
-  artificialEvents: require("raw!../assets/artificial-events.example")
+  artificialEvents: require("raw!../assets/artificial-events.example"),
+  derivable: require("raw!../assets/derivable.example"),
 };
 
 preloader(images);
 
 const theme = createTheme({
-  primary: "#ec607f",
+  primary: "black",
   pink: "#ec607f",
   yellow: "#f6d743",
   green: "#48f3a5",
@@ -92,8 +97,8 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
+      <Spectacle theme={theme} bgColor="black">
+        <Deck transition={["zoom", "slide"]} transitionDuration={500} bgcolor="black">
           <Slide transition={["zoom"]} bgColor="black">
             <Heading size={7} fit caps lineHeight={1} textColor="white">
               Bottling React's
@@ -367,37 +372,37 @@ export default class Presentation extends React.Component {
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="left">
               inconsistency
             </Heading>
-            <Image src={images.inconsistency[0]} height="60vh" />
+            <Image src={images.inconsistency[0]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="left">
               inconsistency
             </Heading>
-            <Image src={images.inconsistency[1]} height="60vh" />
+            <Image src={images.inconsistency[1]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="left">
               inconsistency
             </Heading>
-            <Image src={images.inconsistency[2]} height="60vh" />
+            <Image src={images.inconsistency[2]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="left">
               inconsistency
             </Heading>
-            <Image src={images.inconsistency[3]} height="60vh" />
+            <Image src={images.inconsistency[3]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="left">
               inconsistency
             </Heading>
-            <Image src={images.inconsistency[4]} height="60vh" />
+            <Image src={images.inconsistency[4]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="left">
               inconsistency
             </Heading>
-            <Image src={images.inconsistency[5]} height="60vh" />
+            <Image src={images.inconsistency[5]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["slide"]} bgColor="pink">
             <Heading size={4} textColor="black" fontSize="80px">
@@ -421,61 +426,61 @@ export default class Presentation extends React.Component {
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[0]} height="60vh" />
+            <Image src={images.consistency[0]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[1]} height="60vh" />
+            <Image src={images.consistency[1]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[2]} height="60vh" />
+            <Image src={images.consistency[2]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[3]} height="60vh" />
+            <Image src={images.consistency[3]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[4]} height="60vh" />
+            <Image src={images.consistency[4]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[5]} height="60vh" />
+            <Image src={images.consistency[5]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[6]} height="60vh" />
+            <Image src={images.consistency[6]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[7]} height="60vh" />
+            <Image src={images.consistency[7]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[8]} height="60vh" />
+            <Image src={images.consistency[8]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["none"]} bgColor="black">
             <Heading size={5} textColor="yellow" fontSize="80px" textAlign="right">
               push-pull
             </Heading>
-            <Image src={images.consistency[9]} height="60vh" />
+            <Image src={images.consistency[9]} height="60vh" width="80%" />
           </Slide>
           <Slide transition={["slide"]} bgColor="black">
             <Heading size={6} caps textColor="white" fontSize="80px">
@@ -487,68 +492,53 @@ export default class Presentation extends React.Component {
             <List textColor="white">
               <ListItem>Solves a bunch of problems</ListItem>
               <ListItem>Requires clean separation of effects and state</ListItem>
+              <ListItem>Is tastefully restrictive</ListItem>
             </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={6} caps textColor="white" fontSize="80px">
-              Reminder
-            </Heading>
-            <Heading size={3} caps textColor="pink" fontSize="80px">
-              effects
-            </Heading>
-            <Text textColor="white" textAlign="left">
-              Either:
-            </Text>
-            <List textColor="white">
-              <ListItem>Persistent changes to internal state</ListItem>
-              <ListItem>Behaviour in other systems</ListItem>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="yellow">
-            <Text margin="0 0 30px">
-              Persistent changes to internal state are <strong>easy easy lemon etc </strong>
-              with push-pull.
-            </Text>
-            <Text>
-              You only ever need to worry about updating atomic state.
-            </Text>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="pink">
-            <Heading size={6}>
-              What if I told you that <span style={{color: "white"}}>side
-              effects are just state changes in other systems</span>
-            </Heading>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black" bgImage={images.mindBlown} />
-          <Slide transition={["slide"]} bgColor="yellow">
-            <Text margin="0 0 30px">
-              So what if we could execute side effects by outlining the next
-              state we want an external system to be in, and letting it figure
-              out how to get there?
-            </Text>
-            <Text>
-              <strong>Sound familiar?</strong>
-            </Text>
-          </Slide>
-          <Slide transition={["none"]} bgColor="yellow">
-            <Text margin="0 0 30px">
-              So what if we could execute side effects by outlining the next
-              state we want an external system to be in, and letting it figure
-              out how to get there?
-            </Text>
-            <Text>
-              <strong>That's React!</strong>
-            </Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="black">
             <Image src={images.vaguelyHow} fit />
           </Slide>
-          <Slide transition={["slide"]} bgColor="pink">
+          <Slide transition={["slide"]} bgColor="pink" notes="makes it difficult to maintain a clean separation between atomic and derived state">
             <Text textColor="black" textAlign="left" padding="0 0 40px">
-              primary beef
+              primary beefs
             </Text>
             <Heading fit size={4} textColor="black" fontSize="80px">
-              React <span style={{color: "white"}}>only cares about VDOM</span>
+              React only cares about <span style={{color: "white"}}>deriving VDOM</span>
+            </Heading>
+          </Slide>
+          <Slide transition={["none"]} bgColor="pink">
+            <Text textColor="black" textAlign="left" padding="0 0 40px">
+              primary beefs
+            </Text>
+            <Heading fit size={4} textColor="black" fontSize="80px">
+              React only cares about <span style={{color: "white"}}>rearranging trees</span>
+            </Heading>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="pink">
+            <BlockQuote>
+              <Quote>What if I told you that side effects are just state changes in other systems?</Quote>
+              <Cite>React</Cite>
+            </BlockQuote>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black" bgImage={images.mindBlown} />
+          <Slide transition={["slide"]} bgColor="pink">
+            <BlockQuote>
+              <Quote>
+                <Text fontSize="80pt">
+                  What if we could execute side effects by outlining the
+                  state we want an external system to be in, and letting someone
+                  else figure out how to put it in that state?
+                </Text>
+              </Quote>
+              <Cite>React</Cite>
+            </BlockQuote>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="pink">
+            <Heading size={4} textColor="black" fontSize="80px">
+              These are very general ideas but
+              <span style={{color: "white"}}>
+                &nbsp;React is frustratingly narrow in focus
+              </span>
             </Heading>
           </Slide>
           <Slide transition={["slide"]} bgColor="yellow">
@@ -573,6 +563,40 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="black">
             <Image src={images.derivables} fit />
           </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={1} textColor="pink">
+              Implementing Libraries
+            </Heading>
+            <List textColor="white">
+              <ListItem><strong>MobX</strong> (observable, computed, reaction)</ListItem>
+              <ListItem><strong>DerivableJS</strong> 😊</ListItem>
+              <ListItem><strong>Agera</strong> (by Google for Android Java)</ListItem>
+              <ListItem>Maybe: <strong>Shiny</strong> (R), <strong>KnockoutJS,</strong> probably others?</ListItem>
+            </List>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="yellow">
+            <Image src={images.jori} width="80%" />
+          </Slide>
+          <Slide transition={["slide"]} bgColor="yellow">
+            <Image src={images.dan} width="80%" />
+          </Slide>
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            bgColor="black"
+            titleStyle={{border: 'none'}}
+            code={code.derivable}
+            ranges={[
+              { loc: [0, 1], title: "Hello Derivables" },
+              { loc: [2, 8], title: "Declaring atomic state" },
+              { loc: [9, 12], title: "Declaring derived state" },
+              { loc: [13, 16], title: "Declaring derived state" },
+              { loc: [17, 20], title: "Declaring derived state" },
+              { loc: [21, 29], title: "Declaring side effects" },
+              { loc: [30, 36], title: "Updating atomic state" },
+              { loc: [37, 42], title: "Updating atomic state" },
+            ]}
+          />
         </Deck>
       </Spectacle>
     );

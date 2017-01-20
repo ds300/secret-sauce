@@ -1,0 +1,42 @@
+import {atom, derivation} from 'derivable';
+
+const todos = atom(List([
+  new Todo({
+    title: "Buy some eggs",
+    complete: false
+  }),
+]));
+
+const numTodos = derivation(() =>
+  todos.get().size
+);
+
+const completedTodos = derivation(() =>
+  todos.get().filter(todo => todo.complete)
+);
+
+const numTodosLeft = derivation(() =>
+  numTodos.get() - completeTodos.get().size
+);
+
+const notificationsEnabled = atom(true);
+
+numTodosLeft.react(n => {
+  alert(`You now have ${n} todos left!`);
+}, {
+  when: notificationsEnabled,
+  skipFirst: true
+});
+
+todos.set(todos.get()
+  .push(new Todo({
+    title: "Eat some eggs",
+    complete: false
+  }))
+);
+
+notificationsEnabled.set(false);
+
+todos.set(todos.get()
+  .setIn([0, 'complete'], true)
+);
