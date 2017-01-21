@@ -35,8 +35,12 @@ todos.set(todos.get()
   }))
 );
 
-notificationsEnabled.set(false);
-
-todos.set(todos.get()
-  .setIn([0, 'complete'], true)
+const vdom = derivation(() =>
+  <ul>
+    {todos.get().map(({title}) =>
+      <li>{title}</li>
+    )}
+  </ul>
 );
+
+vdom.react(bindTo(document.body));
