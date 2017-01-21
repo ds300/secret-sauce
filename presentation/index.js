@@ -85,6 +85,8 @@ const code = {
   thumbnails: require("raw!../assets/thumbnails.example"),
 };
 
+console.log("tht fucking code be ike", code);
+
 preloader(images);
 
 const theme = createTheme({
@@ -123,14 +125,11 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="black">
-            <Heading size={2} caps fit textColor="yellow">
-              premise
-            </Heading>
-            <Heading caps textColor="white">
+            <Heading caps textColor="yellow">
               React is clever and good
             </Heading>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes="want to talk about it with technical specificity">
+          <Slide transition={["none"]} bgColor="black" notes="want to talk about it with technical specificity">
             <Heading size={3} caps textColor="yellow">
               Why?
             </Heading>
@@ -138,7 +137,7 @@ export default class Presentation extends React.Component {
               What's the big idea?
             </Text>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["none"]} bgColor="black">
             <Heading size={3} caps textColor="yellow">
               SO what?
             </Heading>
@@ -160,7 +159,7 @@ export default class Presentation extends React.Component {
               <strong>What the heck is state</strong> and how do we manage it?
             </Text>
           </Slide>
-          <Slide transition={["slide"]} bgColor="yellow">
+          <Slide transition={["none"]} bgColor="yellow">
             <Heading size={2} textColor="black">
               <em>State (n)</em>
             </Heading>
@@ -182,7 +181,7 @@ export default class Presentation extends React.Component {
               [ &nbsp;couldn't be more boring&nbsp; ]
             </Text>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["none"]} bgColor="black">
             <Heading size={6} caps textColor="white" fontSize="80px">
               type 2
             </Heading>
@@ -208,7 +207,7 @@ export default class Presentation extends React.Component {
               <strong> only constant and working state.</strong>
             </Text>
           </Slide>
-          <Slide transition={["slide"]} bgColor="yellow">
+          <Slide transition={["none"]} bgColor="yellow">
             <Text>
               Most apps <strong>sit around waiting for external events </strong>
               to trigger internal behaviour.
@@ -227,7 +226,7 @@ export default class Presentation extends React.Component {
               <ListItem>Used to trigger <strong>Effects</strong></ListItem>
             </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["none"]} bgColor="black">
             <Heading size={3} caps textColor="pink" fontSize="80px">
               EFFECTS
             </Heading>
@@ -266,7 +265,7 @@ export default class Presentation extends React.Component {
               [ &nbsp;FP, Event Sourcing, STM, Actors, CSP...&nbsp; ]
             </Text>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["none"]} bgColor="black">
             <Heading size={6} textColor="white" fontSize="80px">
               TYPE 3a
             </Heading>
@@ -287,7 +286,7 @@ export default class Presentation extends React.Component {
               mouseX, db cache, ...&nbsp; ]
             </Text>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["none"]} bgColor="black">
             <Heading size={6} textColor="white" fontSize="80px">
               TYPE 4
             </Heading>
@@ -328,7 +327,7 @@ export default class Presentation extends React.Component {
               <ListItem>Poor separation of concerns</ListItem>
             </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["none"]} bgColor="black">
             <Heading size={6} caps textColor="white" fontSize="80px">
               Approach 2
             </Heading>
@@ -342,7 +341,7 @@ export default class Presentation extends React.Component {
               <ListItem>Not scalable at all</ListItem>
             </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["none"]} bgColor="black">
             <Heading size={6} caps textColor="white" fontSize="80px">
               Approach 3
             </Heading>
@@ -354,7 +353,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <CodePane source={code.artificialEvents} lang="js" textSize="20pt" />
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["none"]} bgColor="black">
             <Heading size={6} caps textColor="white" fontSize="80px">
               Approach 3
             </Heading>
@@ -411,7 +410,7 @@ export default class Presentation extends React.Component {
               Events are <span style={{color: "white"}}>obnoxious bullies</span>
             </Heading>
           </Slide>
-          <Slide transition={["slide"]} bgColor="pink">
+          <Slide transition={["none"]} bgColor="pink">
             <Heading size={4} textColor="black" fontSize="80px">
               Event handlers <span style={{color: "white"}}>must</span> be allowed to operate in a consistent world
             </Heading>
@@ -515,6 +514,18 @@ export default class Presentation extends React.Component {
             <Heading fit size={4} textColor="black" fontSize="80px">
               React only cares about <span style={{color: "white"}}>rearranging trees</span>
             </Heading>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="pink">
+            <BlockQuote>
+              <Quote>
+                <Text fontSize="80pt">
+                  What if we could update the DOM by just saying
+                  how it should look right now and letting someone else
+                  figure out how to get it there?
+                </Text>
+              </Quote>
+              <Cite>React</Cite>
+            </BlockQuote>
           </Slide>
           <Slide transition={["slide"]} bgColor="pink">
             <BlockQuote>
@@ -648,10 +659,10 @@ export default class Presentation extends React.Component {
           />
           <Slide transition={["slide"]} bgColor="black">
             <Text textColor="green">
-              <strong>Sound Familiar?</strong>
+              <strong>Seem Familiar?</strong>
             </Text>
             <Text margin="40px 0 0 0" textColor="white">
-              That's <strong>Relay</strong>!
+              Just like <strong>Relay</strong>, <strong>Falcor</strong>, et al!
             </Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="pink">
