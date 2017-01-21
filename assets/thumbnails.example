@@ -1,0 +1,13 @@
+const friends = atom(List(...));
+
+const thumbnailCache = atom(Map(...));
+
+const neededThumbnails = derivation(() =>
+  friends.get()
+    .map(f => f.thumbnailUrl)
+    .filter(url => !cache.get().has(url));
+);
+
+neededThumbnails.react(
+  createFetcher(thumbnailCache)
+);

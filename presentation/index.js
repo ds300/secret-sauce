@@ -55,6 +55,7 @@ const images = {
   badTools: require("../assets/bad-tools.svg"),
   jori: require("../assets/jori.png"),
   dan: require("../assets/dan.png"),
+  chilicorn: require("../assets/chilicorn.png"),
   inconsistency: [
     require("../assets/inconsistency1.svg"),
     require("../assets/inconsistency2.svg"),
@@ -81,6 +82,7 @@ const code = {
   manualOnHeap: require("raw!../assets/manual-on-heap.example"),
   artificialEvents: require("raw!../assets/artificial-events.example"),
   derivable: require("raw!../assets/derivable.example"),
+  thumbnails: require("raw!../assets/thumbnails.example"),
 };
 
 preloader(images);
@@ -632,6 +634,18 @@ export default class Presentation extends React.Component {
               cancelling in-flight requests that are no longer needed.
             </Text>
           </Slide>
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            bgColor="black"
+            titleStyle={{border: 'none'}}
+            code={code.thumbnails}
+            ranges={[
+              { loc: [0, 3] },
+              { loc: [4, 9] },
+              { loc: [10, 13] },
+            ]}
+          />
           <Slide transition={["slide"]} bgColor="black">
             <Text textColor="green">
               <strong>Sound Familiar?</strong>
@@ -726,6 +740,7 @@ export default class Presentation extends React.Component {
               Create declarative APIs
             </Heading>
           </Slide>
+          <Slide transition={["slide"]} bgColor="black" bgImage={images.chilicorn} />
         </Deck>
       </Spectacle>
     );
