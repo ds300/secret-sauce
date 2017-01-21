@@ -590,9 +590,13 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="yellow">
             <Image src={images.jori} width="80%" />
           </Slide>
+          { /*
+
           <Slide transition={["slide"]} bgColor="yellow">
             <Image src={images.dan} width="80%" />
           </Slide>
+
+           */ }
           <CodeSlide
             transition={[]}
             lang="js"
