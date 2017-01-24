@@ -96,7 +96,7 @@ const theme = createTheme({
   green: "#48f3a5",
   grey: "#999"
 }, {
-  primary: "Sharp Sans No1",
+  primary: { name: "Rubik", googleFont: true, styles: ["300", "300i", "400", "400i", "500", "500i" , "700", "700i", "900", "900i"] },
   secondary: { name: "Droid Serif", googleFont: true, styles: [ "400", "700i" ] }
 });
 
